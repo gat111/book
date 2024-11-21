@@ -2,14 +2,15 @@
 <!DOCTYPE configuration>
 <!-- 上記はEclipseの警告を消すための記述です。 -->
 
-<Context reloadable="true">
-	<Resource
-		name="jdbc/book"
-		auth="Container"
-		type="javax.sql.DataSource"
-		driverClassName="org.h2.Driver"
-		url="jdbc:h2:tcp://localhost/~/book"
-		username="sa"
-		password=""
-	/>
+<Context>
+    <Resource name="jdbc/book"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://dpg-csvhc1rv2p9s73d18ktg-a/book_j7p0"
+              username="book_j7p0_user"
+              password="dwzHlPprv31xNJPljuyh7qVzh2rTE5Mk"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="-1"/>
 </Context>
